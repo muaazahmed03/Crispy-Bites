@@ -1,0 +1,688 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+
+*{
+    margin: 0%;
+}
+
+/* General styles for the navbar */
+.navbar {
+    padding: 10px 20px;
+    background: linear-gradient(180deg, #323753, #02000e);
+    
+}
+
+/* Logo adjustments */
+.navbar-brand img {
+    width: 120px; /* Adjust logo size */
+    height: auto;
+}
+.logo{
+    margin-left: 20px;
+}
+
+/* Navbar link styling */
+.navbar-nav .nav-link {
+    margin-left: 20px;
+    color: #666565;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+.navbar-nav{
+    display: flex;
+    gap: 50px;
+}
+.nav-link{
+    color: yellow;
+}
+
+/* Hover effect for navbar links */
+.navbar-nav .nav-link:hover {
+    color: white;
+    background-color: #ff6600; /* Customize hover background */
+    border-radius: 7px;
+}
+
+/* Active link styling */
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #ff6600;
+    border-radius: 10px;
+}
+
+/* Disabled link styling */
+.navbar-nav .nav-link.disabled {
+    color: #797979;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* _______________________________________________________________________  */
+
+/* Initial hero section with background image */
+.hero-section {
+    height: 85vh; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.hero-text{
+    color: rgb(2, 2, 22);
+}
+/* Video will replace the background after 3 seconds */
+.hero-video {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay for the background and video */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the darkness */
+    z-index: 1;
+}
+
+/* Hero content styling */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #c9c8c8;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: #c9c8c8;
+}
+
+/* Button styling */
+.btn-hero {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: rgba(255, 104, 4, 0.603); /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Orange hover effect for button */
+.btn-hero:hover {
+    background-color: rgba(255, 63, 4, 0.836); /* Darker orange on hover */
+}
+
+@media (max-width: 500px) {
+    .hero-content h1 {
+        font-size: 27px;
+        color: #c9c8c8;
+    }
+    .hero-content p {
+        font-size: 15px;
+        color: #c9c8c8;
+    }
+    .btn-hero {
+        /* display: none; */
+        font-size: 14px;
+        background-color: rgba(255, 104, 4, 0.603); /* Button color */
+    }
+}
+/* __________________________________________________________________________  */
+
+.about-us-main{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #1b1d2c, #02000e);
+    height: 450px;
+}
+.about-us{
+    width: 600px;
+    margin-top: 80px;
+    color: rgb(190, 190, 190);
+}
+.about-us-h1{
+    color: rgb(190, 190, 190);
+}
+.about-us-img{
+    width: 500px;
+    height: 350px;
+    margin-top: 50px;
+}
+
+@media (max-width: 500px) {
+    .about-us-main{
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+
+    }
+    .about-us-img{
+        width: 100%;
+        height: 350px;
+        margin-bottom: 70px;
+    }
+    .about-us{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        width: 98%;
+    }
+}
+/* ________________________________________________________  */
+
+/* Menu Section */
+.menu-section {
+    background-image: url('https://media.istockphoto.com/id/184415150/photo/metal-texture-background.jpg?s=612x612&w=0&k=20&c=_Of5snSoV3EoH1me1bj7tMXRNIp4ZDpbIB8nDvxinqg=');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-title {
+    font-size: 28px;
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+/* Horizontal Scrollable List */
+.menu-list-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 15px;
+    margin: 0 auto 20px;
+    max-width: 100%;
+}
+
+.menu-list {
+    display: flex;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+.menu-list div {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-list div:hover{
+    background-color: #ff6600;
+    color: white;
+    transform: scale(1.1);
+}
+.menu-list div.active {
+    background-color: #05001f;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Card Style */
+.menu-box-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-box {
+    width: 300px;
+    max-width: 350px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 350px;
+}
+
+.menu-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.menu-content {
+    padding: 8px;
+    text-align: center;
+}
+.menu-content h4{
+    color: black;
+}
+.menu-content p{
+    color: rgb(255, 51, 0);
+}
+
+.menu-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-order {
+    background-color: #ff6600;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.plus-icon {
+    font-size: 24px;
+    color: #ff6600;
+}
+
+/* See All Box */
+.see-all-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-category {
+    display: none; /* Hide by default; show active category with JS */
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Background images for each category */
+#burgers {
+    background-image: url('https://mcdn.wallpapersafari.com/medium/62/92/z7KT5A.jpg');
+}
+
+#rolls {
+    background-image: url('https://i.ytimg.com/vi/GV5VOPGgTqQ/maxresdefault.jpg');
+}
+
+#sandwich-wings {
+    background-image: url('https://i.ytimg.com/vi/eD2GEGjrCjI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAR2ZrqIuTt-Lc9S-VGcDfVMwwPvA');
+}
+
+#broast {
+    background-image: url('https://images.deliveryhero.io/image/fd-pk/LH/t9mt-listing.jpg');
+}
+
+#french-fries {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/83/French_Fries.JPG');
+}
+
+#extra-items {
+    background-image: url('https://www.allrecipes.com/thmb/AHZKxAY0_Ma7SAfPM5RttXh3bKM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/49750_Easiest_Salad_Dressing_DDMFS_2x1-2def08325dc74b91a4849ca43cfaca71.jpg');
+}
+
+/* Dark overlay for readability */
+.menu-category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Content on top of overlay */
+.menu-category .menu-box-container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* __________________________________________________  */
+
+/* Center the call-now section and style the elements */
+.call-now {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+    background: linear-gradient(180deg, #323753, #02000e);
+}
+
+.number {
+    font-size: 22px;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+/* Order Online Button Styling */
+.btn-order-online {
+    margin-top: 15px;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(255, 104, 4, 0.63);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-order-online:hover {
+    background-color: #e62300; /* Darker orange on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ________________________________________________________  */
+
+/* Basic styling for card slider */
+.card-slider {
+    margin: 50px 0;
+}
+
+.owl-carousel .item {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f8f6f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: scaleX(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #272727;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff8800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-gray:hover {
+    background-color: #e62300 !important;
+    color: white !important;
+}
+
+/* Slider container styling */
+.slider-container {
+    position: relative;
+    padding: 50px 0;
+    background-image: url('https://lh3.googleusercontent.com/p/AF1QipNu39noy8tIIljINFVbg9zpN-Y5gKBkHqzyXiW2=s1360-w1360-h1020'); /* Add your image URL here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Makes the background image fixed */
+    background-repeat: no-repeat;
+}
+
+/* Optional: Add some overlay on the background to make content more readable */
+.slider-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.deals-heading{
+    color: white;
+    text-align: center;
+}
+/* Ensure slider content is on top */
+.slider-content {
+    position: relative;
+    z-index: 2; /* So that content is above the overlay */
+}
+
+/* Other slider styles (add the gap fix if needed) */
+.owl-carousel .owl-item {
+    padding-right: 5px; /* Adjust this value to reduce the gap */
+}
+
+.owl-carousel .owl-stage {
+    margin-left: -5px; /* Adjust this value to reduce the gap */
+}
+
+/* _____________________________________________________________  */
+
+/* Location Section Styling */
+.location-section {
+    /* background-image: url('https://media.istockphoto.com/id/184415150/photo/metal-texture-background.jpg?s=612x612&w=0&k=20&c=_Of5snSoV3EoH1me1bj7tMXRNIp4ZDpbIB8nDvxinqg=');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; Makes the background image fixed */
+    /* background-repeat: no-repeat; */
+    background: linear-gradient(180deg, #323753, #02000e);
+    padding: 40px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.location-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #d4d4d4;
+    margin-bottom: 20px;
+}
+
+.location-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.map-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-description {
+    max-width: 400px;
+}
+
+.location-description p {
+    font-size: 16px;
+    color: #d4d4d4;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.location-description strong {
+    color: #d4d4d4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .location-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-container iframe {
+        /* width: 100%; */
+        max-width: 420px;
+    }
+}
+
+
+
+/* _____________________________________________________________  */
+
+
+/* General Footer Styling */
+.footer {
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20231008/pngtree-assorted-fast-food-varieties-displayed-on-a-textured-gray-table-image_13609478.png'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    color: #fff;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f37a24; /* Optional line style */
+    padding-bottom: 5px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* Social Media Icons */
+.footer-socials {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-socials a {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #f37a24; /* Hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    #copyright {
+        margin-bottom: 40px;
+    }
+}
+#copyright {
+    background: hsl(242, 51%, 15%);
+    border-top: 4px solid #000000;
+    text-align: center;
+    position: relative;
+    margin-top: 40px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* user agent stylesheet */
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+#footer {
+    color: #ffffff;
+    height: 100%;
+    max-height: 600px;
+}

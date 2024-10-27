@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crispy Bites</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+       <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <!-- Logo aligned to the left -->
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="WhatsApp_Image_2024-10-19_at_3.46.19_PM-removebg-preview.png" alt="Logo" style="width: 100px;">
+            </a>
+            <!-- Responsive toggle button -->
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-light"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link text-light active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link text-light active" aria-current="page" href="#">Menu</a>
+                    <a class="nav-link text-light active" aria-current="page" href="#">Deals</a>
+                    <a class="nav-link text-light active" aria-current="page" href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero-section" id="heroSection">
+        <div class="hero-content">
+            <h1 class="hero-text">Welcome to Our Crispy Bites Food</h1>
+            <p class="hero-text">Delicious food, quick service, and a great dining experience!</p>
+            <a href="#" class="btn-hero">Order Now</a>
+        </div>
+    </section>
+
+
+    <div class="about-us-main">
+        <div class="about-us">
+            <h1 class="about-us-h1">About Us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quos, sed explicabo quis nemo harum fugit, quasi temporibus recusandae mollitia delectus voluptas natus est magnam dolor eius? Sunt, quo aspernatur</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quos, sed explicabo quis nemo harum fugit, quasi temporibus recusandae mollitia delectus voluptas natus est magnam dolor eius? Sunt, quo aspernatur</p>
+        </div>
+        <div>
+            <img class="about-us-img" src="burger.jpeg" alt="">
+        </div>
+    </div>
+
+    <!-- _____________________________________________________________  -->
+
+    <section class="menu-section">
+        <h2 class="menu-title">Our Delicious Menu</h2>
+    
+        <!-- Horizontal Scrollable List of Categories -->
+        <div class="menu-list-wrapper">
+            <div class="menu-list">
+                <div onclick="showCategory('burgers')">Burgers</div>
+                <div onclick="showCategory('rolls')">Rolls & Crispy Bites</div>
+                <div onclick="showCategory('sandwich-wings')">Sandwich & Wings</div>
+                <div onclick="showCategory('broast')">Broast</div>
+                <div onclick="showCategory('french-fries')">French Fries</div>
+                <div onclick="showCategory('extra-items')">Extra Items</div>
+            </div>
+        </div>
+    
+        <!-- Menu Items Display -->
+        <div class="menu-display">
+            <!-- Example Category -->
+            <div class="menu-category" id="burgers">
+                <div class="menu-box-container">
+                    <div class="menu-box">
+                        <img width="100%" height="60%" class="burger-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS89a7GRJR956DCN97EVCvwmA4EElmaIPmALg&s" alt="Burger">
+                        <div class="menu-content">
+                            <h4>Zinger Burger</h4>
+                            <p>Rs 340/-</p>
+                            <div class="menu-actions">
+                                <button class="btn-order">Order Now</button>
+                                <span class="plus-icon">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-box">
+                        <img width="100%" height="59%" class="burger-img" src="https://rynok.pk/wp-content/uploads/2022/07/Zinger-Burger-with-mayo-dip-848x477-1.jpg" alt="Burger">
+                        <div class="menu-content">
+                            <h4>Zinger Cheese Burger</h4>
+                            <p>Rs 390/-</p>
+                            <div class="menu-actions">
+                                <button class="btn-order">Order Now</button>
+                                <span class="plus-icon">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-box">
+                        <img width="100%" height="58%" class="burger-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwR-j3Af2vnCIUEDcE0PPvUejYysDaxAVZcQ&s" alt="Burger">
+                        <div class="menu-content">
+                            <h4>Beef Cheese Burger</h4>
+                            <p>Rs 370/-</p>
+                            <div class="menu-actions">
+                                <button class="btn-order">Order Now</button>
+                                <span class="plus-icon">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-box">
+                        <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
+                        <div class="menu-content">
+                            <h4>More!</h4>
+                            <p>..</p>
+                            <div class="menu-actions">
+                                <button class="btn-order">See All</button>
+                                <span class="plus-icon">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Burger Cards... -->
+                </div>
+            </div>
+            <!-- Similar sections for Rolls, Sandwiches, etc. -->
+            <div class="menu-display">
+                <!-- Example Category -->
+                <div class="menu-category" id="rolls">
+                    <div class="menu-box-container">
+                        <div class="menu-box">
+                            <img width="100%" height="60%" class="burger-img" src="https://i.ytimg.com/vi/Vj2vqHW5pjI/maxresdefault.jpg" alt="Burger">
+                            <div class="menu-content">
+                                <h4>Chicken Mayo Roll</h4>
+                                <p>Rs 199/-</p>
+                                <div class="menu-actions">
+                                    <button class="btn-order">Order Now</button>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-box">
+                            <img width="100%" height="59%" class="burger-img" src="https://mirchihut.pk/wp-content/uploads/2020/09/beef-behari-chatni-roll.jpg" alt="Burger">
+                            <div class="menu-content">
+                                <h4>Zinger Roll</h4>
+                                <p>Rs 250/-</p>
+                                <div class="menu-actions">
+                                    <button class="btn-order">Order Now</button>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-box">
+                            <img width="100%" height="58%" class="burger-img" src="https://akazfoods.businesswala.pk/assets/uploads/1478_beb2446959688c6cfa2dd2d33369fbf1.png" alt="Burger">
+                            <div class="menu-content">
+                                <h4>Beef Kabab Cheese Roll</h4>
+                                <p>Rs 299/-</p>
+                                <div class="menu-actions">
+                                    <button class="btn-order">Order Now</button>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-box">
+                            <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
+                            <div class="menu-content">
+                                <h4>More!</h4>
+                                <p>..</p>
+                                <div class="menu-actions">
+                                    <button class="btn-order">See All</button>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Additional Burger Cards... -->
+                    </div>
+                </div>
+                <div class="menu-display">
+                    <!-- Example Category -->
+                    <div class="menu-category" id="sandwich-wings">
+                        <div class="menu-box-container">
+                            <div class="menu-box">
+                                <img width="100%" height="60%" class="burger-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFGdvMm7gQR2sH2RegfPYXKIIhx0p5QY1P9kZs9-5guQuDlxTTZ_1gBva4fU8XhcDTeBU0qFOlrOZfrTeBU6A05u9Vx6qSsJdv1z6_DiPyPsa_HOwm2Rlmws0OTx2RUbJKfFsOFNtgiYM/s1600/triple+bacon+club+sandwich+on+plate.jpg" alt="Burger">
+                                <div class="menu-content">
+                                    <h4>Club Sandwich</h4>
+                                    <p>Rs 360/-</p>
+                                    <div class="menu-actions">
+                                        <button class="btn-order">Order Now</button>
+                                        <span class="plus-icon">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-box">
+                                <img width="100%" height="59%" class="burger-img" src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/10/club-sandwich-1-480x270.jpg" alt="Burger">
+                                <div class="menu-content">
+                                    <h4>Cheese Club Sandwich</h4>
+                                    <p>Rs 450/-</p>
+                                    <div class="menu-actions">
+                                        <button class="btn-order">Order Now</button>
+                                        <span class="plus-icon">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-box">
+                                <img width="100%" height="58%" class="burger-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnUP0F9YkbPoyKmwjkJHzcJ5A6czUYrRfA9PVDw0EnDyRwbTLeqxf_Te8eJeEYWPMod7OOBF7rZDv_sH80-Wms20rFprOGXe_9m96vaOJoKnz-vQ-AQ7S1s5oK4pA8t_g5zW_1NzcMckWlndJykZDIRhze2XgKOH09usJZSz1C617e8PjvqEG0Br1LQA/s1600/Fried%20Hot%20wings%201-2.jpg" alt="Burger">
+                                <div class="menu-content">
+                                    <h4>Hot Wings (6 pcs)</h4>
+                                    <p>Rs 280/-</p>
+                                    <div class="menu-actions">
+                                        <button class="btn-order">Order Now</button>
+                                        <span class="plus-icon">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-box">
+                                <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
+                                <div class="menu-content">
+                                    <h4>More!</h4>
+                                    <p>..</p>
+                                    <div class="menu-actions">
+                                        <button class="btn-order">See All</button>
+                                        <span class="plus-icon">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Additional Burger Cards... -->
+                        </div>
+                    </div>
+                    <div class="menu-display">
+                        <!-- Example Category -->
+                        <div class="menu-category" id="broast">
+                            <div class="menu-box-container">
+                                <div class="menu-box">
+                                    <img width="100%" height="60%" class="burger-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1iH8fpx3KpDeRoSJCunvWV9O9Uq054ThtGA&s" alt="Burger">
+                                    <div class="menu-content">
+                                        <h4>Broast Leg</h4>
+                                        <p>Rs 380/-</p>
+                                        <div class="menu-actions">
+                                            <button class="btn-order">Order Now</button>
+                                            <span class="plus-icon">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-box">
+                                    <img width="100%" height="59%" class="burger-img" src="https://cloud-supermeal.s3.eu-west-2.amazonaws.com/p/pk/images/000/129/000129224_chicken-broast-quarter-chest.jpg" alt="Burger">
+                                    <div class="menu-content">
+                                        <h4>Broast Chest</h4>
+                                        <p>Rs 420/-</p>
+                                        <div class="menu-actions">
+                                            <button class="btn-order">Order Now</button>
+                                            <span class="plus-icon">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-box">
+                                    <img width="100%" height="58%" class="burger-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkvmttD-4_LvdLU3wwUAi5KbP5-BrcoGUsLA&s" alt="Burger">
+                                    <div class="menu-content">
+                                        <h4>Cheese Broast Leg</h4>
+                                        <p>Rs 450/-</p>
+                                        <div class="menu-actions">
+                                            <button class="btn-order">Order Now</button>
+                                            <span class="plus-icon">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-box">
+                                    <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
+                                    <div class="menu-content">
+                                        <h4>More!</h4>
+                                        <p>..</p>
+                                        <div class="menu-actions">
+                                            <button class="btn-order">See All</button>
+                                            <span class="plus-icon">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Additional Burger Cards... -->
+                            </div>
+                        </div>
+            <div class="menu-display">
+                <!-- Example Category -->
+                <div class="menu-category" id="french-fries">
+                    <div class="menu-box-container">
+                        <div class="menu-box">
+                            <img width="100%" height="60%" class="burger-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb6jgS3lAoddN-WqmyJmligeQs3r-DnaMswQ&s" alt="Burger">
+                            <div class="menu-content">
+                                <h4>Plain Fries</h4>
+                                <p>Rs 100/-</p>
+                                <div class="menu-actions">
+                                    <button class="btn-order">Order Now</button>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-box">
+                            <img width="100%" height="59%" class="burger-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNQ1q8maKPiFOZEsedwASATrlX5bFKi8dLFQ&s" alt="Burger">
+                            <div class="menu-content">
+                                <h4>Mayo Garlic Fries</h4>
+                                <p>Rs 160/-</p>
+                                <div class="menu-actions">
+                                    <button class="btn-order">Order Now</button>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-box">
+                            <img width="100%" height="58%" class="burger-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOfVhBgqhevT7dPqEbwEVkbNXe3bOcDnwl9g&s" alt="Burger">
+                            <div class="menu-content">
+                                <h4>Special Fries</h4>
+                                <p>Rs 350/-</p>
+                                <div class="menu-actions">
+                                    <button class="btn-order">Order Now</button>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-box">
+                            <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
+                            <div class="menu-content">
+                                <h4>More!</h4>
+                                <p>..</p>
+                                <div class="menu-actions">
+                                    <button class="btn-order">See All</button>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Additional Burger Cards... -->
+                    </div>
+                </div>
+                <!-- Example Category -->
+                <div class="menu-category" id="extra-items">
+                    <div class="menu-box-container">
+                        <div class="menu-box">
+                            <img width="100%" height="60%" class="burger-img" src="https://www.allrecipes.com/thmb/iRcip7RaCHF_RmbzDV4bC8gqNYs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-504780334-2000-1caaee9e697c40a8935db7b8d9818a85.jpg" alt="Burger">
+                            <div class="menu-content">
+                                <h4>Cheese</h4>
+                                <p>Rs 70/-</p>
+                                <div class="menu-actions">
+                                    <button class="btn-order">Order Now</button>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-box">
+                            <img width="100%" height="59%" class="burger-img" src="https://www.allrecipes.com/thmb/gxFCb4Pn0zTmUgHlvn1EVA24zn0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6576998-homemade-garlic-mayonnaise-Kim-4x3-1-8734c3d46a67482eba63376821736ab9.jpg" alt="Burger">
+                            <div class="menu-content">
+                                <h4>Mayo Garlic</h4>
+                                <p>Rs 50/-</p>
+                                <div class="menu-actions">
+                                    <button class="btn-order">Order Now</button>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-box">
+                            <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
+                            <div class="menu-content">
+                                <h4>More!</h4>
+                                <p>..</p>
+                                <div class="menu-actions">
+                                    <button class="btn-order">See All</button>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Additional Burger Cards... -->
+                    </div>
+                </div>
+        </div>
+    </section>
+
+<!-- ________________________________________________________  -->
+
+<div class="call-now">
+    <h2 class="number">CALL NOW</h2>
+    <h2 class="number">0319-0008977</h2>
+    <button class="btn-order-online">Order Online</button>
+</div>
+
+
+
+<!-- ___________________________________________________________________  -->
+
+<div class="slider-container">
+    <div class="slider-content">
+        <!-- Your slider code here -->
+         <h1 class="deals-heading">Our Deals</h1>
+         <h2 class="deals-heading">Checkout our deals and order now</h2>
+        <div class="card-slider">
+            <div class="owl-carousel owl-theme">
+                <!-- Card 1 -->
+                <div class="item">
+                    <div class="card">
+                        <img src="https://images.deliveryhero.io/image/fd-pk/Products/5168202.jpg?width=%s" alt="Card 1 Image">
+                        <div class="card-body">
+                            <h3>DEAL 0</h3>
+                            <p>2 Junior Zinger Burger + 345ml</p>
+                            <br>
+                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 480/-</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="item">
+                    <div class="card">
+                        <img src="https://themeaten.pk/wp-content/uploads/2024/05/chicken-crunchy-zinger-burger-scaled.jpg" alt="Card 2 Image">
+                        <div class="card-body">
+                            <h3>DEAL 1</h3>
+                            <p>Zinger Burger + Chicken Chatni Roll + 345ml</p>
+                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 549/-</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="item">
+                    <div class="card">
+                        <img src="https://leathamschefsblog.wordpress.com/wp-content/uploads/2014/06/club-final.jpg" alt="Card 3 Image">
+                        <div class="card-body">
+                            <h3>DEAL 2</h3>
+                            <p>Zinger Burger + Club Sandwich + 345ml</p>
+                            <br>
+                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 699/-</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="item">
+                    <div class="card">
+                        <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/504A4FD8-4C03-427C-881A-81307220E3B9/Derivates/6c932823-d756-4f1d-81d7-b91c8b294303.jpg" alt="Card 3 Image">
+                        <div class="card-body">
+                            <h3>DEAL 3</h3>
+                            <p>Beef Burger + Broast Leg + 345ml</p>
+                            <br>
+                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 730/-</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="item">
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/-f3xtWvOopg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDSMY46Qx4DnFGCFK0Us7SC4-WuYw" alt="Card 3 Image">
+                        <div class="card-body">
+                            <h3>DEAL 4</h3>
+                            <p>Beef Cheese Burger + Crispy Bites + 345ml</p>
+                            <br>
+                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 740/-</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="item">
+                    <div class="card">
+                        <img src="https://foodielassie.com/wp-content/uploads/2021/05/IMG_20210427_004006-01-800x530.jpeg" alt="Card 3 Image">
+                        <div class="card-body">
+                            <h3>DEAL 5</h3>
+                            <p>Zinger Burger + Chicken mayo Roll + Hot Wings + 345ml</p>
+                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 840/-</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="item">
+                    <div class="card">
+                        <img src="All Deals.jpeg" alt="Card 3 Image">
+                        <div class="card-body">
+                            <h3>MORE!</h3>
+                            <p>See All Delicious Deals..</p>
+                            <br>
+                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">SEE ALL</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more cards if needed -->
+            </div>
+        </div>
+        <div class="owl-carousel">
+            <!-- Slider items go here -->
+        </div>
+    </div>
+</div>
+
+<!-- _______________________________________________________________________________  -->
+
+<section class="location-section">
+    <div class="container">
+        <h2 class="location-title">Our Location</h2>
+        <div class="location-content">
+            <!-- Google Map -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14468.113443008995!2d67.0570319!3d24.9651497!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb341002812939b%3A0x8676d46c1fe14baa!2sCrispy%20Bites!5e0!3m2!1sen!2s!4v1730027278272!5m2!1sen!2s"
+                    width="450" height="400" frameborder="0" allowfullscreen=""
+                    loading="lazy"></iframe>
+            </div>
+
+            <!-- Location Description -->
+            <div class="location-description">
+                <p>Visit us at our convenient location, where you can enjoy a cozy atmosphere and a variety of delicious options. Our place is easy to reach, with ample parking available for all our guests.</p>
+                <p>We are located in the heart of the city, surrounded by popular attractions and easily accessible by public transport.</p>
+                <p><strong>Address:</strong> 123 Foodie Street, Culinary City</p>
+                <p><strong>Contact:</strong> (0319) 000-8977</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- ________________________________________________________________________-  -->
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about-us">
+            <h3>About Us</h3>
+            <p>We serve fresh and delicious fast food, bringing you the best flavors in town!</p>
+        </div>
+        <div class="footer-section contact-us">
+            <h3>Contact Us</h3>
+            <p>Phone: +123 456 7890</p>
+            <p>Email: info@fastfood.com</p>
+        </div>
+        <div class="footer-section work-time">
+            <h3>Work Time</h3>
+            <p>Mon - Fri: 9:00 AM - 10:00 PM</p>
+            <p>Sat - Sun: 10:00 AM - 11:00 PM</p>
+        </div>
+        <div class="footer-section location">
+            <h3>Location</h3>
+            <p>123 Fast Food Street, Food City</p>
+        </div>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<div id="copyright">
+    <a href="#" class="scrollTopButton">
+<span class="button-square">
+   <i class="fa fa-angle-double-up"></i>
+</span>
+</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="allright"><script id="facebook-jssdk" src="https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js"></script><script>document.write(new Date().getFullYear())</script>2024 <strong class="t-color text-success">Crispy Bites </strong>All rights reserved. Powered by <a href="#"> <strong class="t-color">Muaaz Ahmed Baig</strong></a></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+</html>
