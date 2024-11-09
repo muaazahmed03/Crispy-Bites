@@ -24,7 +24,7 @@
         <div class="container-fluid">
             <!-- Logo aligned to the left -->
             <a class="navbar-brand" href="#">
-                <img class="logo" src="WhatsApp_Image_2024-10-19_at_3.46.19_PM-removebg-preview.png" alt="Logo" style="width: 100px;">
+                <img class="logo fs-6" src="logo.png" alt="Logo" style="width: 100px;">
             </a>
             <!-- Responsive toggle button -->
             <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,29 +33,35 @@
             <!-- Navbar links -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link text-light active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link text-light active" aria-current="page" href="#">Menu</a>
-                    <a class="nav-link text-light active" aria-current="page" href="#">Deals</a>
-                    <a class="nav-link text-light active" aria-current="page" href="#">Contact Us</a>
+                    <a class="nav-link text-light active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link text-light active" aria-current="page" href="menu.html">Menu</a>
+                    <a class="nav-link text-light active" aria-current="page" href="deals.html">Deals</a>
+                    <a class="nav-link text-light active" aria-current="page" href="#contact-us">Contact Us</a>
+                    <button onclick="openCartSummaryModal()" id="viewCartButton" class="btn btn-warning ms-3">View Cart (Total: Rs 0)</button>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- _____________________________________________________________-  -->
     
     <section class="hero-section" id="heroSection">
         <div class="hero-content">
-            <h1 class="hero-text">Welcome to Our Crispy Bites Food</h1>
-            <p class="hero-text">Delicious food, quick service, and a great dining experience!</p>
-            <a href="#" class="btn-hero">Order Now</a>
+            <h1 class="hero-text blink-text">Welcome to Our Crispy Bites Food</h1>
+            <p class="hero-text blink-text">Delicious food, quick service, and a great dining experience!</p>
+            <a href="menu.html" class="btn-hero">Order Now</a>
         </div>
     </section>
+    
+
+    <!-- ___________________________________________________________  -->
 
 
     <div class="about-us-main">
         <div class="about-us">
             <h1 class="about-us-h1">About Us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quos, sed explicabo quis nemo harum fugit, quasi temporibus recusandae mollitia delectus voluptas natus est magnam dolor eius? Sunt, quo aspernatur</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quos, sed explicabo quis nemo harum fugit, quasi temporibus recusandae mollitia delectus voluptas natus est magnam dolor eius? Sunt, quo aspernatur</p>
+            <p>Welcome to Crispy Bites where taste meets quality and convenience! Our journey began with a passion for delicious, freshly prepared food made with the finest ingredients. We believe in serving up meals that are not only flavorful but also crafted with care and commitment. </p>
+            <p>From our mouth-watering burgers and wraps to our crispy fries and refreshing beverages, each item on our menu is made to order. Whether you're grabbing a quick bite on the go, dining in with friends, or enjoying a cozy meal at home, we’re here to make your experience unforgettable.            </p>
         </div>
         <div>
             <img class="about-us-img" src="burger.jpeg" alt="">
@@ -90,7 +96,7 @@
                             <h4>Zinger Burger</h4>
                             <p>Rs 340/-</p>
                             <div class="menu-actions">
-                                <button class="btn-order">Order Now</button>
+                                <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Zinger Burger', 350)">Order Now</a>
                                 <span class="plus-icon">+</span>
                             </div>
                         </div>
@@ -101,7 +107,7 @@
                             <h4>Zinger Cheese Burger</h4>
                             <p>Rs 390/-</p>
                             <div class="menu-actions">
-                                <button class="btn-order">Order Now</button>
+                                <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Zinger Cheese Burger', 390)">Order Now</a>
                                 <span class="plus-icon">+</span>
                             </div>
                         </div>
@@ -112,19 +118,19 @@
                             <h4>Beef Cheese Burger</h4>
                             <p>Rs 370/-</p>
                             <div class="menu-actions">
-                                <button class="btn-order">Order Now</button>
+                                <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Beef Cheese Burger', 370)">Order Now</a>
                                 <span class="plus-icon">+</span>
                             </div>
                         </div>
                     </div>
-                    <div class="menu-box">
+                    <div onclick="menuAll()" class="menu-box">
                         <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
                         <div class="menu-content">
-                            <h4>More!</h4>
+                            <h4>See More!</h4>
                             <p>..</p>
                             <div class="menu-actions">
-                                <button class="btn-order">See All</button>
-                                <span class="plus-icon">+</span>
+                                <button onclick="menuAll()" class="btn-order">See All</button>
+                                <span onclick="menuAll()" class="plus-icon">+</span>
                             </div>
                         </div>
                     </div>
@@ -143,7 +149,7 @@
                                 <h4>Chicken Mayo Roll</h4>
                                 <p>Rs 199/-</p>
                                 <div class="menu-actions">
-                                    <button class="btn-order">Order Now</button>
+                                    <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Chicken Mayo Roll', 199)">Order Now</a>
                                     <span class="plus-icon">+</span>
                                 </div>
                             </div>
@@ -154,7 +160,7 @@
                                 <h4>Zinger Roll</h4>
                                 <p>Rs 250/-</p>
                                 <div class="menu-actions">
-                                    <button class="btn-order">Order Now</button>
+                                    <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Zinger Roll', 250)">Order Now</a>
                                     <span class="plus-icon">+</span>
                                 </div>
                             </div>
@@ -165,19 +171,19 @@
                                 <h4>Beef Kabab Cheese Roll</h4>
                                 <p>Rs 299/-</p>
                                 <div class="menu-actions">
-                                    <button class="btn-order">Order Now</button>
+                                    <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Beef Kabab Cheese Roll', 299)">Order Now</a>
                                     <span class="plus-icon">+</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="menu-box">
+                        <div onclick="menuAll()" class="menu-box">
                             <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
                             <div class="menu-content">
-                                <h4>More!</h4>
+                                <h4>See More!</h4>
                                 <p>..</p>
                                 <div class="menu-actions">
-                                    <button class="btn-order">See All</button>
-                                    <span class="plus-icon">+</span>
+                                    <button onclick="menuAll()" class="btn-order">See All</button>
+                                    <span onclick="menuAll()" class="plus-icon">+</span>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +200,7 @@
                                     <h4>Club Sandwich</h4>
                                     <p>Rs 360/-</p>
                                     <div class="menu-actions">
-                                        <button class="btn-order">Order Now</button>
+                                        <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Club Sandwich', 360)">Order Now</a>
                                         <span class="plus-icon">+</span>
                                     </div>
                                 </div>
@@ -203,9 +209,9 @@
                                 <img width="100%" height="59%" class="burger-img" src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/10/club-sandwich-1-480x270.jpg" alt="Burger">
                                 <div class="menu-content">
                                     <h4>Cheese Club Sandwich</h4>
-                                    <p>Rs 450/-</p>
+                                    <p>Rs 410/-</p>
                                     <div class="menu-actions">
-                                        <button class="btn-order">Order Now</button>
+                                        <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Cheese Club Sandwich', 410)">Order Now</a>
                                         <span class="plus-icon">+</span>
                                     </div>
                                 </div>
@@ -216,15 +222,15 @@
                                     <h4>Hot Wings (6 pcs)</h4>
                                     <p>Rs 280/-</p>
                                     <div class="menu-actions">
-                                        <button class="btn-order">Order Now</button>
+                                        <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Hot Wings (6 pcs)', 280)">Order Now</a>
                                         <span class="plus-icon">+</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="menu-box">
+                            <div onclick="menuAll()" class="menu-box">
                                 <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
                                 <div class="menu-content">
-                                    <h4>More!</h4>
+                                    <h4>See More!</h4>
                                     <p>..</p>
                                     <div class="menu-actions">
                                         <button class="btn-order">See All</button>
@@ -245,7 +251,7 @@
                                         <h4>Broast Leg</h4>
                                         <p>Rs 380/-</p>
                                         <div class="menu-actions">
-                                            <button class="btn-order">Order Now</button>
+                                            <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Broast Leg', 380)">Order Now</a>
                                             <span class="plus-icon">+</span>
                                         </div>
                                     </div>
@@ -256,7 +262,7 @@
                                         <h4>Broast Chest</h4>
                                         <p>Rs 420/-</p>
                                         <div class="menu-actions">
-                                            <button class="btn-order">Order Now</button>
+                                            <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Broast Chest', 420)">Order Now</a>
                                             <span class="plus-icon">+</span>
                                         </div>
                                     </div>
@@ -267,15 +273,15 @@
                                         <h4>Cheese Broast Leg</h4>
                                         <p>Rs 450/-</p>
                                         <div class="menu-actions">
-                                            <button class="btn-order">Order Now</button>
+                                            <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Cheese Broast Leg', 450)">Order Now</a>
                                             <span class="plus-icon">+</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="menu-box">
+                                <div onclick="menuAll()" class="menu-box">
                                     <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
                                     <div class="menu-content">
-                                        <h4>More!</h4>
+                                        <h4>See More!</h4>
                                         <p>..</p>
                                         <div class="menu-actions">
                                             <button class="btn-order">See All</button>
@@ -296,7 +302,7 @@
                                 <h4>Plain Fries</h4>
                                 <p>Rs 100/-</p>
                                 <div class="menu-actions">
-                                    <button class="btn-order">Order Now</button>
+                                    <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Plain Fries', 100)">Order Now</a>
                                     <span class="plus-icon">+</span>
                                 </div>
                             </div>
@@ -307,7 +313,7 @@
                                 <h4>Mayo Garlic Fries</h4>
                                 <p>Rs 160/-</p>
                                 <div class="menu-actions">
-                                    <button class="btn-order">Order Now</button>
+                                    <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Mayo Garlic Fries', 160)">Order Now</a>
                                     <span class="plus-icon">+</span>
                                 </div>
                             </div>
@@ -318,15 +324,15 @@
                                 <h4>Special Fries</h4>
                                 <p>Rs 350/-</p>
                                 <div class="menu-actions">
-                                    <button class="btn-order">Order Now</button>
+                                    <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Special Fries', 350)">Order Now</a>
                                     <span class="plus-icon">+</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="menu-box">
+                        <div onclick="menuAll()" class="menu-box">
                             <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
                             <div class="menu-content">
-                                <h4>More!</h4>
+                                <h4>See More!</h4>
                                 <p>..</p>
                                 <div class="menu-actions">
                                     <button class="btn-order">See All</button>
@@ -346,7 +352,7 @@
                                 <h4>Cheese</h4>
                                 <p>Rs 70/-</p>
                                 <div class="menu-actions">
-                                    <button class="btn-order">Order Now</button>
+                                    <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Cheese', 70)">Order Now</a>
                                     <span class="plus-icon">+</span>
                                 </div>
                             </div>
@@ -357,15 +363,15 @@
                                 <h4>Mayo Garlic</h4>
                                 <p>Rs 50/-</p>
                                 <div class="menu-actions">
-                                    <button class="btn-order">Order Now</button>
+                                    <a href="#" class="btn-order link-offset-2 link-underline link-underline-opacity-0 btn-order-now" onclick="openOrderModal('Menu Item: Mayo Garlic', 50)">Order Now</a>
                                     <span class="plus-icon">+</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="menu-box">
+                        <div onclick="menuAll()" class="menu-box">
                             <img width="100%" height="59%" class="burger-img" src="All Menu.jpeg" alt="Burger">
                             <div class="menu-content">
-                                <h4>More!</h4>
+                                <h4>See More!</h4>
                                 <p>..</p>
                                 <div class="menu-actions">
                                     <button class="btn-order">See All</button>
@@ -384,7 +390,7 @@
 <div class="call-now">
     <h2 class="number">CALL NOW</h2>
     <h2 class="number">0319-0008977</h2>
-    <button class="btn-order-online">Order Online</button>
+    <button onclick="menuAll()" class="btn-order-online">Order Online</button>
 </div>
 
 
@@ -406,7 +412,7 @@
                             <h3>DEAL 0</h3>
                             <p>2 Junior Zinger Burger + 345ml</p>
                             <br>
-                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 480/-</a>
+                            <a href="#" onclick="openOrderModal('Deal 0: 2 Junior Zinger Burger + Soft Drink 345ml ', 480)" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 480/-</a>
                         </div>
                     </div>
                 </div>
@@ -417,7 +423,7 @@
                         <div class="card-body">
                             <h3>DEAL 1</h3>
                             <p>Zinger Burger + Chicken Chatni Roll + 345ml</p>
-                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 549/-</a>
+                            <a href="#" onclick="openOrderModal('Deal 1: 1 Zinger Burger + 1 Chicken Chatni Roll + Soft Drink 345ml ', 549)" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 549/-</a>
                         </div>
                     </div>
                 </div>
@@ -429,7 +435,7 @@
                             <h3>DEAL 2</h3>
                             <p>Zinger Burger + Club Sandwich + 345ml</p>
                             <br>
-                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 699/-</a>
+                            <a href="#" onclick="openOrderModal('Deal 2: 1 Zinger Burger + 1 Club Sandwich + Soft Drink 345ml ', 699)" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 699/-</a>
                         </div>
                     </div>
                 </div>
@@ -441,7 +447,7 @@
                             <h3>DEAL 3</h3>
                             <p>Beef Burger + Broast Leg + 345ml</p>
                             <br>
-                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 730/-</a>
+                            <a href="#" onclick="openOrderModal('Deal 3: 1 Beef Burger + 1 Broast Leg + Soft Drink 345ml ', 730)" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 730/-</a>
                         </div>
                     </div>
                 </div>
@@ -453,7 +459,7 @@
                             <h3>DEAL 4</h3>
                             <p>Beef Cheese Burger + Crispy Bites + 345ml</p>
                             <br>
-                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 740/-</a>
+                            <a href="#" onclick="openOrderModal('Deal 4: 1 Beef Cheese Burger + 1 Crispy Bites + Soft Drink 345ml ', 740)" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 740/-</a>
                         </div>
                     </div>
                 </div>
@@ -464,7 +470,7 @@
                         <div class="card-body">
                             <h3>DEAL 5</h3>
                             <p>Zinger Burger + Chicken mayo Roll + Hot Wings + 345ml</p>
-                            <a href="#" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 840/-</a>
+                            <a href="#" onclick="openOrderModal('Deal 5: 1 Zinger Burger + 1 Chicken Mayo Roll + 1 Hot Wings + Soft Drink 345ml ', 840)" class="btn btn-primary-gray" style="background-color: #ff6600; color: #fff;">Rs 840/-</a>
                         </div>
                     </div>
                 </div>
@@ -489,6 +495,66 @@
     </div>
 </div>
 
+
+  <!-- __________________________________________________________________  -->
+
+    <!-- Modal HTML -->
+    <div id="orderModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Confirm Your Order</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="orderDetails"></p>
+                    <p><strong>Price:</strong> <span id="orderPrice"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-warning" onclick="confirmAddToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- __________________________________________________________________  -->
+    
+    <div id="cartSummaryModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="cartItemsList" class="list-group mb-3"></ul>
+                    <p><strong>Total Price: Rs <span id="totalCartPrice">0</span></strong></p>
+                    <hr>
+                    <h6>Enter Your Details</h6>
+                    <form id="orderForm">
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="userName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userLocation" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="userLocation" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userPhone" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control" id="userPhone" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning" onclick="confirmOrder()">Confirm Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <!-- _______________________________________________________________________________  -->
 
 <section class="location-section">
@@ -499,7 +565,7 @@
             <div class="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14468.113443008995!2d67.0570319!3d24.9651497!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb341002812939b%3A0x8676d46c1fe14baa!2sCrispy%20Bites!5e0!3m2!1sen!2s!4v1730027278272!5m2!1sen!2s"
-                    width="450" height="400" frameborder="0" allowfullscreen=""
+                    width="300" height="300" frameborder="0" allowfullscreen=""
                     loading="lazy"></iframe>
             </div>
 
@@ -507,7 +573,7 @@
             <div class="location-description">
                 <p>Visit us at our convenient location, where you can enjoy a cozy atmosphere and a variety of delicious options. Our place is easy to reach, with ample parking available for all our guests.</p>
                 <p>We are located in the heart of the city, surrounded by popular attractions and easily accessible by public transport.</p>
-                <p><strong>Address:</strong> 123 Foodie Street, Culinary City</p>
+                <p><strong>Address:</strong> Sector 11 C 2 North Karachi Twp, Karachi, Karachi City, Sindh 75850, Pakistan</p>
                 <p><strong>Contact:</strong> (0319) 000-8977</p>
             </div>
         </div>
@@ -522,22 +588,22 @@
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-section about-us">
-            <h3>About Us</h3>
-            <p>We serve fresh and delicious fast food, bringing you the best flavors in town!</p>
+            <h3 id="contact-us" class="myabout">About Us</h3>
+            <p class="myabout">We serve fresh and delicious fast food, bringing you the best flavors in town!</p>
         </div>
         <div class="footer-section contact-us">
             <h3>Contact Us</h3>
-            <p>Phone: +123 456 7890</p>
-            <p>Email: info@fastfood.com</p>
+            <p>Phone: <a href="tel:+1234567890">(0319) 000-8977</a></p>
+            <p>Email: <a href="mailto:info@fastfood.com">info@crispybites.com</a></p>
         </div>
         <div class="footer-section work-time">
             <h3>Work Time</h3>
-            <p>Mon - Fri: 9:00 AM - 10:00 PM</p>
-            <p>Sat - Sun: 10:00 AM - 11:00 PM</p>
+            <p>Mon - Fri: 7:00 PM - 02:00 AM</p>
+            <p>Sat - Sun: 5:00 PM - 03:00 AM</p>
         </div>
         <div class="footer-section location">
             <h3>Location</h3>
-            <p>123 Fast Food Street, Food City</p>
+            <p>Sector 11 C 2 North Karachi Twp, Karachi, Karachi City, Sindh 75850, Pakistan</p>
         </div>
         <div class="footer-socials">
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -546,17 +612,23 @@
     </div>
 </footer>
 
+<!-- ________________________________________________________________________  -->
+
 
 <div id="copyright">
-    <a href="#" class="scrollTopButton">
-<span class="button-square">
-   <i class="fa fa-angle-double-up"></i>
-</span>
-</a>
+    <a href="#" class="scrollTopButton" onclick="scrollToTop()">
+        <span class="button-square">
+            <i class="fa fa-angle-double-up"></i>
+        </span>
+    </a>
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <span class="allright"><script id="facebook-jssdk" src="https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js"></script><script>document.write(new Date().getFullYear())</script>2024 <strong class="t-color text-success">Crispy Bites </strong>All rights reserved. Powered by <a href="#"> <strong class="t-color">Muaaz Ahmed Baig</strong></a></span>
+                <span class="allright">
+                    <script>document.write(new Date().getFullYear())</script> 
+                    <strong class="t-color">Crispy Bites</strong> All rights reserved. Powered by 
+                    <a href="#"><strong class="t-color">Muaaz Ahmed Baig</strong></a>
+                </span>
             </div>
         </div>
     </div>
@@ -569,6 +641,6 @@
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

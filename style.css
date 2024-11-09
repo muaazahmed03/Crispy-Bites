@@ -9,7 +9,6 @@
 .navbar {
     padding: 10px 20px;
     background: linear-gradient(180deg, #323753, #02000e);
-    
 }
 
 /* Logo adjustments */
@@ -19,8 +18,14 @@
 }
 .logo{
     margin-left: 20px;
-}
 
+}
+img.logo.fs-6 {
+    height: 70px !important;
+    width: 75px !important;
+    margin-top: -14px !important;
+    padding-top: 5px !important;
+}
 /* Navbar link styling */
 .navbar-nav .nav-link {
     margin-left: 20px;
@@ -68,7 +73,7 @@
 
 /* Initial hero section with background image */
 .hero-section {
-    height: 85vh; /* Adjust height as needed */
+    height: 87vh; /* Adjust height as needed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +85,20 @@
 
 .hero-text{
     color: rgb(2, 2, 22);
+    font-size: 2em; /* Adjust as needed */
+    color: #ffffff; /* Initial color */
 }
+
+.blink-text {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { color: #ffffff; }
+    50% { color: #05001f; /* Light orange color */ }
+    100% { color: #ffffff; }
+}
+
 /* Video will replace the background after 3 seconds */
 .hero-video {
     display: none;
@@ -177,6 +195,9 @@
 }
 
 @media (max-width: 500px) {
+    .menu-list-wrapper{
+        overflow-x: hidden;
+    }
     .about-us-main{
         display: flex;
         flex-direction: column;
@@ -300,7 +321,7 @@
     align-items: center;
 }
 
-.btn-order {
+.btn-order{
     background-color: #ff6600;
     color: white;
     padding: 8px 15px;
@@ -376,6 +397,7 @@
     position: relative;
     z-index: 2;
 }
+
 
 
 /* __________________________________________________  */
@@ -589,100 +611,186 @@
 
 /* _____________________________________________________________  */
 
-
-/* General Footer Styling */
+/* Footer Styles */
 .footer {
-    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20231008/pngtree-assorted-fast-food-varieties-displayed-on-a-textured-gray-table-image_13609478.png'); /* Replace with the path to your image */
+    position: relative;
+    background: url('https://images.pexels.com/photos/750073/pexels-photo-750073.jpeg?cs=srgb&dl=pexels-dana-tentis-118658-750073.jpg&fm=jpg') no-repeat center center/cover;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    color: #ffffff;
     padding: 40px 20px;
-    color: #fff;
-    position: relative;
+    text-align: center;
+    overflow: hidden;
 }
 
+/* Dark Overlay */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Footer Content */
 .footer-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    text-align: left; /* Align text to the left */
 }
 
 .footer-section {
     flex: 1 1 200px;
-    margin: 10px;
+    padding: 10px;
+    color: #e0e0e0;
 }
 
 .footer-section h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #f37a24; /* Optional line style */
-    padding-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #ffc107;
 }
 
-.footer-section p {
-    font-size: 0.9em;
-    line-height: 1.5;
+.footer-section .myabout{
+    position: relative;
+    bottom: 75px;
+}
+
+
+.footer-section p, .footer-section a {
+    font-size: 16px;
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.footer-section p:hover,
+.footer-section a:hover {
+    color: #ffc107;
 }
 
 /* Social Media Icons */
 .footer-socials {
-    text-align: center;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
     margin-top: 20px;
 }
 
 .footer-socials a {
-    color: #fff;
-    font-size: 1.5em;
-    margin: 0 10px;
-    transition: color 0.3s;
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s ease;
 }
 
 .footer-socials a:hover {
-    color: #f37a24; /* Hover color */
+    color: #ffc107;
 }
 
-/* Responsive Design */
+/* Responsive Styling */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 0px;
+    }
+    .footer-section .myabout{
+        position: relative;
+        bottom: 20px;
+    }
+
+    .footer-section {
+        max-width: 100%;
+        padding: 20px;
     }
 }
 
 
 
+/* ____________________________________________________  */
 
 
-
-
-
-@media only screen and (max-width: 767px) {
-    #copyright {
-        margin-bottom: 40px;
-    }
-}
+/* General Footer Styles */
 #copyright {
-    background: hsl(242, 51%, 15%);
-    border-top: 4px solid #000000;
+    background-color: #333;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
     position: relative;
-    margin-top: 40px;
 }
 
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+/* Scroll-to-Top Button */
+.scrollTopButton {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    color: #333;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
-/* user agent stylesheet */
-div {
-    display: block;
-    unicode-bidi: isolate;
+
+.scrollTopButton:hover {
+    background-color: #e0a800;
+    color: #fff;
 }
-#footer {
-    color: #ffffff;
-    height: 100%;
-    max-height: 600px;
+
+/* Text and Link Styling */
+.allright {
+    font-size: 14px;
+}
+
+.allright strong {
+    color: #ffc107;
+    transition: color 0.3s;
+}
+
+.allright strong:hover {
+    color: #e0a800;
+}
+
+.allright a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.allright a:hover {
+    color: #e0a800;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .scrollTopButton {
+        right: 10px;
+        bottom: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .allright {
+        font-size: 13px;
+    }
 }
